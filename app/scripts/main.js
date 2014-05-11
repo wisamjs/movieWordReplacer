@@ -21,8 +21,10 @@ $(document).ready(function(){
 				title = "Mom's" +title.substring(title.indexOf(' '), title.length);
 			}
 
-			
-
+			//if more than 1 word, replace the last word with mom
+			else {
+				title = title.substring(0, title.lastIndexOf(' ')) + " Mom";
+			}
 		}
 
 		else{
