@@ -6,9 +6,25 @@ $(document).ready(function(){
 	var addWord = function(title){
 
 		//logic to change word here
+
+		//if first word contains the
 		if (title.indexOf('The') === 0){
 			title = "Mom's " + title.substring(4,title.length);
+
 		}
+
+		//else if title contains more than 1 word and does not start with "The"
+		else if (title.indexOf(' ') != -1){
+			
+			//just 1 space, replace first word
+			if(title.indexOf(' ') === title.lastIndexOf(' ')){
+				title = "Mom's" +title.substring(title.indexOf(' '), title.length);
+			}
+
+			
+
+		}
+
 		else{
 			title = "Mom's" + ' ' +  title;
 		}
@@ -40,8 +56,8 @@ $(document).ready(function(){
 				data: {api_key: movieApp.api_key},
 				dataType: 'jsonp',
 				success: function(response) {
-					console.log(response);
-					config = response;
+					// console.log(response);
+					// config = response;
 				}
 			});
 
