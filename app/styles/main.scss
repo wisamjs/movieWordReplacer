@@ -3,7 +3,7 @@
 
 
 $blue: #5994B3;
-$purple: #A3f;
+$purple: #F1662B;
 $white: #fff;
 
 $p-size: 22px;
@@ -69,10 +69,13 @@ body {
                 } 
             }//left
             &.right {
+                h2, h3 {
+                    color: $blue;
+                }
                 h2 {
                     font-size: 40px;
                 }
-                h3, h4 {
+                h3 {
                     font-weight: 600;
                     font-size: 30px;
                 } 
