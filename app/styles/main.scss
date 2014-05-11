@@ -64,6 +64,7 @@ body {
                     background-color: $white;
                     border-radius: 3px;
                     max-width: 500px;
+                    max-height: 500px;
                     box-shadow: -20px 20px 20px rgba(0,0,0,0.40);
                 } 
             }//left
@@ -96,7 +97,7 @@ body {
             background-color: $purple;
         }
         &:active {
-            color: white;
+            color: #000;
         }
     }
 }
