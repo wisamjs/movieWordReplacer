@@ -4,6 +4,7 @@ $(document).ready(function(){
 	var movie={};
 	var config;
 	var addWord = function(title){
+		$('#title').empty();
 
 		//logic to change word here
 
@@ -86,7 +87,7 @@ $(document).ready(function(){
 
 	var reset = function(){
 
-		$('#title').empty();
+		
 		$('#date').empty();
 
 		movieApp.getMovies(getRandomNumber(150), getRandomNumber(20));
