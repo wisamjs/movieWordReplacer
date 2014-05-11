@@ -54,12 +54,10 @@ body {
         }
     }
     .movieDiv {
-        font-family: 'Source Sans Pro', sans-serif;
-        
+        font-family: 'Source Sans Pro', sans-serif;      
         .movie {
             float: left;
             width: 50%;
-
             &.left {                
                 img {
                     padding: 10px;
@@ -85,7 +83,7 @@ body {
         }//movie
     } //movieDiv
     input[type="button"] {
-        margin-top: 100px;
+        margin-top: 30.2px;
         font-family: 'Source Sans Pro', Helvetica;
         font-weight: 800;
         font-size: 25px;
@@ -104,3 +102,23 @@ body {
 }
 
 
+@media (max-width: 1000px) {
+    .movie {
+        &.left {
+            img {
+                width: 350px;
+                height: 350px;
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .wrapper{
+        .movieDiv {
+            .movie {
+                width: 100%;       
+            } 
+        }
+    }  
+}
