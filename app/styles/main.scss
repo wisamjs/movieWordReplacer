@@ -54,37 +54,31 @@ body {
         }
     }
     .movieDiv {
-        font-family: 'Source Sans Pro', sans-serif;      
-        .movie {
-            float: left;
-            width: 50%;
-            &.left {                
-                img {
-                    padding: 10px;
-                    background-color: $white;
-                    border-radius: 3px;
-                    max-width: 500px;
-                    max-height: 500px;
-                    box-shadow: -20px 20px 20px rgba(0,0,0,0.40);
-                } 
-            }//left
-            &.right {
-                h2, h3 {
-                    color: $blue;
-                }
-                h2 {
-                    font-size: 40px;
-                }
-                h3 {
-                    font-weight: 600;
-                    font-size: 30px;
-                } 
-                p {
-                    font-size: $p-size;
-                    line-height: $p-height;
-                }
-            }//right
-        }//movie
+        font-family: 'Source Sans Pro', sans-serif;                    
+        img {
+            padding: 10px;
+            background-color: $white;
+            border: 1px solid rgba(0,0,0,0.3);
+            border-radius: 3px;
+            max-width: 500px;
+            max-height: 500px;
+            box-shadow: -20px 20px 20px rgba(0,0,0,0.40);
+        } 
+
+        h2, h3 {
+            color: $blue;
+        }
+        h2 {
+            font-size: 40px;
+        }
+        h3 {
+            font-weight: 600;
+            font-size: 30px;
+        } 
+        p {
+            font-size: $p-size;
+            line-height: $p-height;
+        }
     } //movieDiv
     input[type="button"] {
         margin-top: 30.2px;
@@ -106,23 +100,23 @@ body {
 }
 
 
-@media (max-width: 1000px) {
-    .movie {
-        &.left {
-            img {
-                width: 350px;
-                height: 350px;
-            }
+@media (max-width: 600px) {
+    .wrapper {
+        .movie {
+                img {
+                    max-width: 350px;
+                    height: 350px;
+                }
         }
     }
 }
 
-@media (max-width: 750px) {
-    .wrapper{
-        .movieDiv {
-            .movie {
-                width: 100%;       
-            } 
-        }
-    }  
-}
+// @media (max-width: 750px) {
+//     .wrapper{
+//         .movieDiv {
+//             .movie {
+//                 width: 100%;       
+//             } 
+//         }
+//     }  
+// }
