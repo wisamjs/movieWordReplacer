@@ -19,6 +19,11 @@ $(document).ready(function(){
 		$('#poster').attr("src",base_url + imageUrl);
 
 	}
+
+	var addDate = function(releaseDate){
+		$('#date').append(releaseDate);
+
+	}
 	var movieApp = {
 		api_key: 'ed68b87c3d69c256a7f70b7e9cb008e2',
 		test : undefined,
@@ -31,7 +36,6 @@ $(document).ready(function(){
 				success: function(response) {
 					console.log(response);
 					config = response;
-					movieApp.test = response;
 				}
 		});
 
@@ -47,8 +51,11 @@ $(document).ready(function(){
 		  success: function(response) {
 		  	movie.title=response.results[titleIndex].original_title;
 		  	movie.imageUrl= response.results[titleIndex].backdrop_path;
+		  	movie.releaseDate = response.results[titleIndex].release_date;
 		  	addWord(movie.title);
+		  	addDate(movie.releaseDate);
 		  	addBackground('http://image.tmdb.org/t/p/w500', movie.imageUrl);
+		  	console.log(response);
 		  	
 		  
 
@@ -65,6 +72,7 @@ $(document).ready(function(){
 		titleIndex = (Math.floor( Math.random() * 20)+1);
 
 		$('#title').empty();
+		$('#date').empty();
 
 		movieApp.getMovies(pageNumber, titleIndex);
 	}
