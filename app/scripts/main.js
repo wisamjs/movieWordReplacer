@@ -1,5 +1,7 @@
 'use strict';
 
+//This product uses the TMDb API but is not endorsed or certified by TMDb.
+
 $(document).ready(function(){
 	var movie={};
 	var config;
@@ -11,7 +13,6 @@ $(document).ready(function(){
 		//if first word contains the
 		if (title.indexOf('The') === 0){
 			title = "Mom's " + title.substring(4,title.length);
-
 		}
 
 		//else if title contains more than 1 word and does not start with "The"
@@ -27,7 +28,7 @@ $(document).ready(function(){
 				title = title.substring(0, title.lastIndexOf(' ')) + " Mom";
 			}
 		}
-
+		
 		else{
 			title = "Mom's" + ' ' +  title;
 		}

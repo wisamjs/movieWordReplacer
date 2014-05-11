@@ -32,6 +32,7 @@ body {
     src: url('../fonts/True-Crimes/true-crimes.ttf');
 }
 
+
 .wrapper {
     max-width: 1000px;
     margin: 0 auto;
@@ -41,10 +42,12 @@ body {
         background-color: $blue;
         color: $white;;
         border-radius: 15px;
-        font-size: 60px;
+        font-size: 50px;
+        margin-top: 15px;
     }
     h2 {
         font-size: 30px;
+        margin: 15px;
         a {
             text-decoration: none;
             color: $blue;
@@ -67,6 +70,7 @@ body {
 
         h2, h3 {
             color: $blue;
+            margin: 15px;
         }
         h2 {
             font-size: 40px;
@@ -81,7 +85,6 @@ body {
         }
     } //movieDiv
     input[type="button"] {
-        margin-top: 30.2px;
         font-family: 'Source Sans Pro', Helvetica;
         font-weight: 800;
         font-size: 25px;
@@ -96,20 +99,24 @@ body {
         &:active {
             color: #000;
         }
+    }//input
+    .twitter-share-button {
+       
+        width: 250px;
     }
-}
+}//wrapper
 
 
-@media (max-width: 600px) {
-    .wrapper {
-        .movie {
-                img {
-                    max-width: 350px;
-                    height: 350px;
-                }
-        }
-    }
-}
+// @media (max-width: 600px) {
+//     .wrapper {
+//         .movie {
+//                 img {
+//                     max-width: 350px;
+//                     height: 350px;
+//                 }
+//         }
+//     }
+// }
 
 // @media (max-width: 750px) {
 //     .wrapper{
