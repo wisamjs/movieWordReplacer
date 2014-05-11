@@ -13,7 +13,13 @@ $(document).ready(function(){
 			title = "Mom's" + ' ' +  title;
 		}
 
+
+
 		$('#title').append(title);
+	};
+
+	var getRandomNumber = function(maxNumber){
+		return (Math.floor( Math.random() *  maxNumber)+1);
 	};
 
 	var addBackground = function(base_url, imageUrl){
@@ -43,7 +49,7 @@ $(document).ready(function(){
 
 		getMovies: function(pageNumber, titleIndex){
 			$.ajax({
-				url: 'http://api.themoviedb.org/3/movie/popular',
+				url: 'http://api.themoviedb.org/3/movie/top_rated',
 				type: 'GET',
 				data: {api_key: movieApp.api_key, page: pageNumber},
 				dataType: 'jsonp',
@@ -61,28 +67,18 @@ $(document).ready(function(){
 	};
 
 	var reset = function(){
-		pageNumber= (Math.floor( Math.random() * 150)+1);
-		titleIndex = (Math.floor( Math.random() * 20)+1);
 
 		$('#title').empty();
 		$('#date').empty();
 
-		movieApp.getMovies(pageNumber, titleIndex);
+		movieApp.getMovies(getRandomNumber(150), getRandomNumber(20));
 	};
 
-	var pageNumber= (Math.floor( Math.random() * 150)+1);
-	var titleIndex = (Math.floor( Math.random() * 20)+1);
-
 	movieApp.init();
-	movieApp.getMovies(pageNumber, titleIndex);
+	movieApp.getMovies(getRandomNumber(150), getRandomNumber(20));
 	console.log('movieApp: ' + movieApp);
 
 	$('#button').on('click',function(){
 		reset();
-
 	});
-
-		//reset();
-
-
 });
