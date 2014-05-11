@@ -6,6 +6,9 @@ $blue: #5994B3;
 $purple: #A3f;
 $white: #fff;
 
+$p-size: 22px;
+$p-height: $p-size * 1.5;
+
 body {
     background: url('../images/crossword/crossword.png') repeat;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -41,6 +44,7 @@ body {
         font-size: 60px;
     }
     h2 {
+        font-size: 30px;
         a {
             text-decoration: none;
             color: $blue;
@@ -73,6 +77,10 @@ body {
                     font-weight: 600;
                     font-size: 30px;
                 } 
+                p {
+                    font-size: $p-size;
+                    line-height: $p-height;
+                }
             }//right
         }//movie
     } //movieDiv
