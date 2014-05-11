@@ -4,12 +4,21 @@ $(document).ready(function(){
 	var addWord = function(title){
 
 		//logic to change word here
-		for (var i = title.length; i > 0; i -- ){
 
-
+		if (title.indexOf('The') === 0){
+			title = "Mom's " + title.substring(4,title.length);
 		}
-		$('h2').append(title);
+		else{
+			title = "Mom's" + ' ' +  title;
+		}
+
+		$('#title').append(title);
 	};
+
+	var addBackground = function(base_url, imageUrl){
+		$('#poster').attr("src",base_url + imageUrl);
+
+	}
 	var movieApp = {
 		api_key: 'ed68b87c3d69c256a7f70b7e9cb008e2',
 		test : undefined,
@@ -39,6 +48,7 @@ $(document).ready(function(){
 		  	movie.title=response.results[titleIndex].original_title;
 		  	movie.imageUrl= response.results[titleIndex].backdrop_path;
 		  	addWord(movie.title);
+		  	addBackground('http://image.tmdb.org/t/p/w500', movie.imageUrl);
 		  	
 		  
 
@@ -54,7 +64,7 @@ $(document).ready(function(){
 		pageNumber= (Math.floor( Math.random() * 5)+1);
 		titleIndex = (Math.floor( Math.random() * 20)+1);
 
-		$('h2').empty();
+		$('#title').empty();
 
 		movieApp.getMovies(pageNumber, titleIndex);
 	}
