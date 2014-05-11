@@ -2,30 +2,71 @@
 // endbower
 
 body {
-    background: #fafafa;
+    background: url('../images/wild_flowers/wild_flowers.png') repeat;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+@font-face {
+    font-family: 'True-Crimes';
+    src: url('../fonts/True-Crimes/true-crimes.ttf');
+}
+
+.wrapper {
+    max-width: 750px;
+    margin: 0 auto;
+    font-family: 'True-Crimes', Helvetica, sans-serif;
+    text-align: center;
     h1 {
-        font-size: 60px;
-        line-height: 1;
-        letter-spacing: -1px;
+        border-bottom: 3px solid black;
+        padding-bottom: 5px;
+        a {
+            text-decoration: none;
+            color: #A3f;
+        }
+    }
+    .movieDiv {
+        font-family: 'Source Sans Pro', sans-serif;
+        h2 {
+            font-size: 40px;
+        }
+        h3, h4 {
+            font-weight: 600;
+            font-size: 30px;
+        }
+        img {
+            padding: 5px;
+            background-color: white;
+            border-radius: 15px;
+            max-width: 500px;
+        }   
+    }
+    input[type="button"] {
+        font-family: 'Source Sans Pro', Helvetica;
+        font-weight: 800;
+        font-size: 25px;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #FF61F6;
+        &:hover {
+            background-color: #A3f;
+        }
+        &:active {
+            color: white;
+        }
     }
 }
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
+
