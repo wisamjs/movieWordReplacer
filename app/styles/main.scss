@@ -1,8 +1,13 @@
 // bower:scss
 // endbower
 
+
+$blue: #5994B3;
+$purple: #A3f;
+$white: #fff;
+
 body {
-    background: url('../images/wild_flowers/wild_flowers.png') repeat;
+    background: url('../images/crossword/crossword.png') repeat;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
 }
@@ -25,43 +30,64 @@ body {
 }
 
 .wrapper {
-    max-width: 750px;
+    max-width: 1000px;
     margin: 0 auto;
-    font-family: 'True-Crimes', Helvetica, sans-serif;
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
     text-align: center;
     h1 {
-        border-bottom: 3px solid black;
-        padding-bottom: 5px;
+        background-color: $blue;
+        color: $white;;
+        border-radius: 15px;
+        font-size: 60px;
+    }
+    h2 {
         a {
             text-decoration: none;
-            color: #A3f;
+            color: $blue;
+            &:hover {
+                color: $purple;
+            }
         }
     }
     .movieDiv {
         font-family: 'Source Sans Pro', sans-serif;
-        h2 {
-            font-size: 40px;
-        }
-        h3, h4 {
-            font-weight: 600;
-            font-size: 30px;
-        }
-        img {
-            padding: 5px;
-            background-color: white;
-            border-radius: 15px;
-            max-width: 500px;
-        }   
-    }
+        
+        .movie {
+            float: left;
+            width: 50%;
+
+            &.left {                
+                img {
+                    padding: 10px;
+                    background-color: $white;
+                    border-radius: 3px;
+                    max-width: 500px;
+                    box-shadow: -20px 20px 20px rgba(0,0,0,0.40);
+                } 
+            }//left
+            &.right {
+                h2 {
+                    font-size: 40px;
+                }
+                h3, h4 {
+                    font-weight: 600;
+                    font-size: 30px;
+                } 
+            }//right
+        }//movie
+    } //movieDiv
     input[type="button"] {
+        margin-top: 100px;
         font-family: 'Source Sans Pro', Helvetica;
         font-weight: 800;
         font-size: 25px;
         padding: 20px;
         border-radius: 5px;
-        background-color: #FF61F6;
+        color: white;
+        background-color: $blue;
+        border: none;
         &:hover {
-            background-color: #A3f;
+            background-color: $purple;
         }
         &:active {
             color: white;
